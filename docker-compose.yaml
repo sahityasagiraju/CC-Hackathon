@@ -1,0 +1,87 @@
+version: '3.3'  # version of compose format
+
+services:
+  landing-service:
+    build: ./landing  # path is relative to docker-compose.yml location
+    hostname: landing-service
+    ports:
+      - 5050:5050  # host:container
+    networks:
+      test_net:
+        aliases:
+          - landing-service
+
+  # Service Template
+  addition-service:
+    build: ./addition
+    hostname: addition-service
+    ports:
+      - 5051:5051
+    networks:
+      test_net:
+        aliases:
+          - addition-service
+
+  subtraction-service:
+    build: ./subtraction
+    hostname: subtraction-service
+    ports:
+      - 5052:5052
+    networks:
+      test_net:
+        aliases:
+          - subtraction-service
+
+  multiplication-service:
+    build: ./multiplication
+    hostname: multiplication-service
+    ports:
+      - 5053:5053
+    networks:
+      test_net:
+        aliases:
+          - multiplication-service
+
+  division-service:
+    build: ./division
+    hostname: division-service
+    ports:
+      - 5054:5054
+    networks:
+      test_net:
+        aliases:
+          - division-service
+
+  lcm-service:
+    build: ./lcm
+    hostname: lcm-service
+    ports:
+      - 5055:5055
+    networks:
+      test_net:
+        aliases:
+          - lcm-service
+
+  gcd-service:
+    build: ./gcd
+    hostname: gcd-service
+    ports:
+      - 5056:5056
+    networks:
+      test_net:
+        aliases:
+          - gcd-service
+
+  modulus-service:
+    build: ./modulus
+    hostname: modulus-service
+    ports:
+      - 5057:5057
+    networks:
+      test_net:
+        aliases:
+          - modulus-service
+
+# Define the custom network ( DO NOT EDIT )
+networks:
+  test_net:
