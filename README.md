@@ -8,7 +8,7 @@ Decouple the arithmetic functions from landing-service.
 
 
 The four arithmetic functions currently reside under landing-service. 
-However, if landing-service were to become unavailable for whatever reason, the four functions would be unavailable as well. **Create separate flask applications, Addition, Subtraction, Multiplication and Division. **
+However, if landing-service were to become unavailable for whatever reason, the four functions would be unavailable as well. **Create separate flask applications, Addition, Subtraction, Multiplication and Division.**
 
 Each application will consist of a class which inherits the Resource class of flask_restful module. Define a GET method within the class with necessary parameters. An example of this class with the method defined can be found here and here Use the add_resource function to add the class as a resource and define the API endpoint.
 
@@ -17,7 +17,7 @@ Make sure to also mention the type of the parameters in the endpoint. Example: a
 
 Add three more services Proceed to add three more services that perform a certain function. You will also have to make changes to the frontend defined in index.html to make these functions available. 
 
-**Mentioned below are possible functions you could implement but feel free to add your own. **
+**Mentioned below are possible functions you could implement but feel free to add your own.**
 
 **gcd:** Takes two numbers as arguments and returns their Greatest Common Divisor 
 
